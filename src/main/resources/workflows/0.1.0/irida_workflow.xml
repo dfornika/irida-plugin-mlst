@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iridaWorkflow>
+  <id>1449d2ed-03ce-41b8-a746-b5328c5f370a</id>
+  <name>MLST</name>
+  <version>0.1.0</version>
+  <analysisType>MLST</analysisType>
+  <inputs>
+    <sequenceReadsPaired>sequence_reads_paired</sequenceReadsPaired>
+    <requiresSingleSample>true</requiresSingleSample>
+  </inputs>
+  <parameters>
+  </parameters>
+  <outputs>
+    <output name="assembly_quality" fileName="quast.tsv"/>
+    <output name="mlst" fileName="mlst.tsv"/>
+  </outputs>
+  <toolRepositories>
+    <repository>
+      <name>shovill</name>
+      <owner>iuc</owner>
+      <url>https://toolshed.g2.bx.psu.edu/</url>
+      <revision>865119fcb694</revision>
+    </repository>
+    <repository>
+      <name>quast</name>
+      <owner>iuc</owner>
+      <url>https://toolshed.g2.bx.psu.edu/</url>
+      <revision>f30d03867854</revision>
+    </repository>
+    <repository>
+      <name>mlst</name>
+      <owner>iuc</owner>
+      <url>https://toolshed.g2.bx.psu.edu/</url>
+      <revision>1f5641a52664</revision>
+    </repository>
+  </toolRepositories>
+</iridaWorkflow>
