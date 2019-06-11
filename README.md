@@ -107,7 +107,7 @@ Once you've successfully built your plugin, you can distribute the JAR file to o
 [maven-min-pom]: https://maven.apache.org/guides/introduction/introduction-to-the-pom.html#Minimal_POM
 [pf4j-start]: https://pf4j.org/doc/getting-started.html
 [example-plugin-results.png]: doc/images/example-plugin-results.png
-[example-plugin-pipeline.png]: doc/images/example-plugin-pipeline.png
+[mlst-pipeline.png]: doc/images/mlst-pipeline.png
 [example-plugin-metadata.png]: doc/images/example-plugin-metadata.png
 [pipeline-parameters.png]: doc/images/pipeline-parameters.png
 [example-plugin-save-results.png]: doc/images/example-plugin-save-results.png
