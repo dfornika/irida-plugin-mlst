@@ -57,7 +57,7 @@ Once complete, you should end up with a file `target/irida-plugin-mlst-0.1.0-SNA
 
 If you have previously [setup IRIDA][irida-setup] before you may copy this JAR file to `/etc/irida/plugins` and restart IRIDA.  The plugin should now show up in the **Analyses > Pipelines** section of IRIDA.
 
-![example-plugin-pipeline.png][]  
+![mlst-pipeline.png][]  
 
 You should be able to run a pipeline with this plugin and get analysis results.
 
