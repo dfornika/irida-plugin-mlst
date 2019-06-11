@@ -53,7 +53,7 @@ cd irida-plugin-mlst
 mvn clean package
 ```
 
-Once complete, you should end up with a file `target/mlst-1.0-SNAPSHOT.jar` which can be installed as a plugin to IRIDA.
+Once complete, you should end up with a file `target/irida-plugin-mlst-0.1.0-SNAPSHOT.jar` which can be installed as a plugin to IRIDA.
 
 If you have previously [setup IRIDA][irida-setup] before you may copy this JAR file to `/etc/irida/plugins` and restart IRIDA.  The plugin should now show up in the **Analyses > Pipelines** section of IRIDA.
 
