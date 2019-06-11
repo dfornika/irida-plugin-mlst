@@ -1,5 +1,5 @@
 {
-    "uuid": "1449d2ed-03ce-41b8-a746-b5328c5f370a",
+    "uuid": "b5613f7d-982b-4a05-a0b2-b2f645015c32",
     "tags": [],
     "format-version": "0.1",
     "name": "mlst",
@@ -56,7 +56,7 @@
                     "id": 0
                 }
             },
-            "tool_state": "{\"adv\": \"{\\\"depth\\\": \\\"100\\\", \\\"gsize\\\": \\\"\\\", \\\"kmers\\\": \\\"\\\", \\\"mincov\\\": \\\"2\\\", \\\"minlen\\\": \\\"0\\\", \\\"namefmt\\\": \\\"contig%05d\\\", \\\"nocorr\\\": \\\"true\\\", \\\"opts\\\": \\\"\\\"}\", \"trim\": \"\\\"true\\\"\", \"log\": \"\\\"true\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"assembler\": \"\\\"spades\\\"\", \"library\": \"{\\\"__current_case__\\\": 1, \\\"input1\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"lib_type\\\": \\\"collection\\\"}\"}",
+            "tool_state": "{\"adv\": \"{\\\"depth\\\": \\\"100\\\", \\\"gsize\\\": \\\"\\\", \\\"kmers\\\": \\\"\\\", \\\"mincov\\\": \\\"2\\\", \\\"minlen\\\": \\\"0\\\", \\\"namefmt\\\": \\\"contig%05d\\\", \\\"nocorr\\\": \\\"true\\\", \\\"opts\\\": \\\"\\\"}\", \"trim\": \"\\\"true\\\"\", \"log\": \"\\\"true\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"assembler\": \"\\\"spades\\\"\", \"library\": \"{\\\"__current_case__\\\": 1, \\\"input1\\\": {\\\"__class__\\\": \\\"ConnectedValue\\\"}, \\\"lib_type\\\": \\\"collection\\\"}\"}",
             "id": 1,
             "tool_shed_repository": {
                 "owner": "iuc",
@@ -90,12 +90,7 @@
                 }
             },
             "label": null,
-            "inputs": [
-                {
-                    "name": "library",
-                    "description": "runtime parameter for tool Shovill"
-                }
-            ],
+            "inputs": [],
             "position": {
                 "top": 233,
                 "left": 626.5
@@ -136,7 +131,7 @@
             "workflow_outputs": [
                 {
                     "output_name": "quast_tsv",
-                    "uuid": "5eb04545-4ce0-4290-bfc5-c17108ba5e4a",
+                    "uuid": "0392d089-645d-4552-ad32-d7ccdebdd690",
                     "label": null
                 }
             ],
@@ -158,6 +153,11 @@
             "errors": null,
             "name": "Quast",
             "post_job_actions": {
+                "HideDatasetActionunalign_tsv": {
+                    "output_name": "unalign_tsv",
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {}
+                },
                 "HideDatasetActionreport_pdf": {
                     "output_name": "report_pdf",
                     "action_type": "HideDatasetAction",
@@ -175,18 +175,13 @@
                         "newname": "quast.tsv"
                     }
                 },
-                "HideDatasetActionunalign_tsv": {
-                    "output_name": "unalign_tsv",
+                "HideDatasetActionreport_html": {
+                    "output_name": "report_html",
                     "action_type": "HideDatasetAction",
                     "action_arguments": {}
                 },
                 "HideDatasetActionlog_txt": {
                     "output_name": "log_txt",
-                    "action_type": "HideDatasetAction",
-                    "action_arguments": {}
-                },
-                "HideDatasetActionreport_html": {
-                    "output_name": "report_html",
                     "action_type": "HideDatasetAction",
                     "action_arguments": {}
                 }
@@ -236,6 +231,11 @@
                     "output_name": "report",
                     "uuid": "0309637f-bb1f-4689-bfd6-b72920f68b33",
                     "label": null
+                },
+                {
+                    "output_name": "novel_alleles",
+                    "uuid": "6bb3c963-b9be-4f5e-802e-860d53cefb5b",
+                    "label": null
                 }
             ],
             "input_connections": {
@@ -244,7 +244,7 @@
                     "id": 1
                 }
             },
-            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"input_files\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"settings\": \"{\\\"__current_case__\\\": 0, \\\"advanced\\\": \\\"simple\\\"}\"}",
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"input_files\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"settings\": \"{\\\"__current_case__\\\": 0, \\\"advanced\\\": \\\"simple\\\"}\"}",
             "id": 3,
             "tool_shed_repository": {
                 "owner": "iuc",
@@ -256,11 +256,6 @@
             "errors": null,
             "name": "MLST",
             "post_job_actions": {
-                "HideDatasetActionnovel_alleles": {
-                    "output_name": "novel_alleles",
-                    "action_type": "HideDatasetAction",
-                    "action_arguments": {}
-                },
                 "RenameDatasetActionnovel_alleles": {
                     "output_name": "novel_alleles",
                     "action_type": "RenameDatasetAction",
@@ -277,15 +272,10 @@
                 }
             },
             "label": null,
-            "inputs": [
-                {
-                    "name": "input_files",
-                    "description": "runtime parameter for tool MLST"
-                }
-            ],
+            "inputs": [],
             "position": {
-                "top": 479.5,
-                "left": 951.5
+                "top": 520.5,
+                "left": 939.5
             },
             "annotation": "",
             "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/mlst/mlst/2.16.1",

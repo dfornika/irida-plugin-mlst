@@ -9,6 +9,36 @@
     <requiresSingleSample>true</requiresSingleSample>
   </inputs>
   <parameters>
+    <parameter name="shovill-1-adv.nocorr" defaultValue="false">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.nocorr"/>
+    </parameter>
+    <parameter name="shovill-1-adv.mincov" defaultValue="1">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.mincov"/>
+    </parameter>
+    <parameter name="shovill-1-trim" defaultValue="false">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="trim"/>
+    </parameter>
+    <parameter name="shovill-1-adv.namefmt" defaultValue="contig%05d">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.namefmt"/>
+    </parameter>
+    <parameter name="shovill-1-adv.depth" defaultValue="100">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.depth"/>
+    </parameter>
+    <parameter name="shovill-1-adv.gsize" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.gsize"/>
+    </parameter>
+    <parameter name="shovill-1-adv.kmers" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.kmers"/>
+    </parameter>
+    <parameter name="shovill-1-adv.opts" defaultValue="">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.opts"/>
+    </parameter>
+    <parameter name="shovill-1-adv.minlen" defaultValue="1">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.minlen"/>
+    </parameter>
+    <parameter name="shovill-1-assembler" defaultValue="spades">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="assembler"/>
+    </parameter>
   </parameters>
   <outputs>
     <output name="assembly_quality" fileName="quast.tsv"/>
@@ -25,7 +55,7 @@
       <name>quast</name>
       <owner>iuc</owner>
       <url>https://toolshed.g2.bx.psu.edu/</url>
-      <revision>f30d03867854</revision>
+      <revision>81df4950d65b</revision>
     </repository>
     <repository>
       <name>mlst</name>
