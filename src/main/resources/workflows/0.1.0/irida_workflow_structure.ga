@@ -1,9 +1,9 @@
 {
-    "uuid": "4968b147-c6df-467d-907d-83e7d81af8e4",
+    "uuid": "834f656f-67f3-49dc-b3d1-236e728b62bb",
     "tags": [],
     "format-version": "0.1",
     "name": "mlst",
-    "version": 2,
+    "version": 1,
     "steps": {
         "0": {
             "tool_id": null,
@@ -62,7 +62,7 @@
                     "id": 0
                 }
             },
-            "tool_state": "{\"adv\": \"{\\\"depth\\\": \\\"100\\\", \\\"gsize\\\": \\\"\\\", \\\"kmers\\\": \\\"\\\", \\\"mincov\\\": \\\"2\\\", \\\"minlen\\\": \\\"0\\\", \\\"namefmt\\\": \\\"contig%05d\\\", \\\"nocorr\\\": \\\"true\\\", \\\"opts\\\": \\\"\\\"}\", \"trim\": \"\\\"true\\\"\", \"log\": \"\\\"true\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"assembler\": \"\\\"spades\\\"\", \"library\": \"{\\\"__current_case__\\\": 1, \\\"input1\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"lib_type\\\": \\\"collection\\\"}\"}",
+            "tool_state": "{\"adv\": \"{\\\"depth\\\": \\\"100\\\", \\\"gsize\\\": \\\"\\\", \\\"kmers\\\": \\\"\\\", \\\"mincov\\\": \\\"2\\\", \\\"minlen\\\": \\\"0\\\", \\\"namefmt\\\": \\\"contig%05d\\\", \\\"nocorr\\\": \\\"true\\\", \\\"opts\\\": \\\"\\\"}\", \"trim\": \"\\\"true\\\"\", \"log\": \"\\\"true\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"assembler\": \"\\\"spades\\\"\", \"library\": \"{\\\"__current_case__\\\": 1, \\\"input1\\\": {\\\"__class__\\\": \\\"ConnectedValue\\\"}, \\\"lib_type\\\": \\\"collection\\\"}\"}",
             "id": 1,
             "tool_shed_repository": {
                 "owner": "iuc",
@@ -98,12 +98,7 @@
                 }
             },
             "label": null,
-            "inputs": [
-                {
-                    "name": "library",
-                    "description": "runtime parameter for tool Shovill"
-                }
-            ],
+            "inputs": [],
             "position": {
                 "top": 233,
                 "left": 626.5
@@ -166,11 +161,6 @@
             "errors": null,
             "name": "Quast",
             "post_job_actions": {
-                "HideDatasetActionunalign_tsv": {
-                    "output_name": "unalign_tsv",
-                    "action_type": "HideDatasetAction",
-                    "action_arguments": {}
-                },
                 "HideDatasetActionreport_pdf": {
                     "output_name": "report_pdf",
                     "action_type": "HideDatasetAction",
@@ -188,13 +178,18 @@
                         "newname": "quast.tsv"
                     }
                 },
-                "HideDatasetActionreport_html": {
-                    "output_name": "report_html",
+                "HideDatasetActionunalign_tsv": {
+                    "output_name": "unalign_tsv",
                     "action_type": "HideDatasetAction",
                     "action_arguments": {}
                 },
                 "HideDatasetActionlog_txt": {
                     "output_name": "log_txt",
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {}
+                },
+                "HideDatasetActionreport_html": {
+                    "output_name": "report_html",
                     "action_type": "HideDatasetAction",
                     "action_arguments": {}
                 }
@@ -253,7 +248,7 @@
                     "id": 1
                 }
             },
-            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"input_files\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"settings\": \"{\\\"__current_case__\\\": 1, \\\"advanced\\\": \\\"advanced\\\", \\\"mincov\\\": \\\"10\\\", \\\"minid\\\": \\\"95\\\", \\\"novel\\\": \\\"false\\\", \\\"scheme_condition\\\": {\\\"__current_case__\\\": 0, \\\"exclude\\\": \\\"\\\", \\\"minscore\\\": \\\"50\\\", \\\"set_scheme\\\": \\\"auto\\\"}}\"}",
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"input_files\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"settings\": \"{\\\"__current_case__\\\": 1, \\\"advanced\\\": \\\"advanced\\\", \\\"mincov\\\": \\\"10\\\", \\\"minid\\\": \\\"95\\\", \\\"novel\\\": \\\"true\\\", \\\"scheme_condition\\\": {\\\"__current_case__\\\": 0, \\\"exclude\\\": \\\"\\\", \\\"minscore\\\": \\\"50\\\", \\\"set_scheme\\\": \\\"auto\\\"}}\"}",
             "id": 3,
             "tool_shed_repository": {
                 "owner": "iuc",
