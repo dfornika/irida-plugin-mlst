@@ -1,9 +1,9 @@
-# MLST IRIDA Plugin
+# IRIDA MLST Pipeline Plugin
 
 
 # Table of Contents
 
-   * [IRIDA MLST Pipeline Plugin](#irida-example-pipeline-plugin)
+   * [IRIDA MLST Pipeline Plugin](#irida-mlst-pipeline-plugin)
    * [Building/Packaging](#buildingpackaging)
       * [Installing IRIDA to local Maven repository](#installing-irida-to-local-maven-repository)
       * [Building the plugin](#building-the-plugin)
