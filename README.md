@@ -7,7 +7,7 @@
       * [Installing to IRIDA](#installing-to-irida)
       * [Installing Galaxy Dependencies](#installing-galaxy-dependencies)
    * [Usage](#usage)
-      * [Using as a template for developing a plugin](#monitoring-pipeline-status)
+      * [Monitoring Pipeline Status](#monitoring-pipeline-status)
       * [Analysis Results](#analysis-results)
       * [Metadata Table](#metadata-table)
    * [Building](#building)
