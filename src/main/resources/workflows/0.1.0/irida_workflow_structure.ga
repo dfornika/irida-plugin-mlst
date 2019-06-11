@@ -1,9 +1,9 @@
 {
-    "uuid": "b5613f7d-982b-4a05-a0b2-b2f645015c32",
+    "uuid": "4968b147-c6df-467d-907d-83e7d81af8e4",
     "tags": [],
     "format-version": "0.1",
     "name": "mlst",
-    "version": 1,
+    "version": 2,
     "steps": {
         "0": {
             "tool_id": null,
@@ -49,14 +49,20 @@
                     "name": "contigs_graph"
                 }
             ],
-            "workflow_outputs": [],
+            "workflow_outputs": [
+                {
+                    "output_name": "shovill_std_log",
+                    "uuid": "3a8bcc64-c854-40b8-a5cf-504787b65c8d",
+                    "label": null
+                }
+            ],
             "input_connections": {
                 "library|input1": {
                     "output_name": "output",
                     "id": 0
                 }
             },
-            "tool_state": "{\"adv\": \"{\\\"depth\\\": \\\"100\\\", \\\"gsize\\\": \\\"\\\", \\\"kmers\\\": \\\"\\\", \\\"mincov\\\": \\\"2\\\", \\\"minlen\\\": \\\"0\\\", \\\"namefmt\\\": \\\"contig%05d\\\", \\\"nocorr\\\": \\\"true\\\", \\\"opts\\\": \\\"\\\"}\", \"trim\": \"\\\"true\\\"\", \"log\": \"\\\"true\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"assembler\": \"\\\"spades\\\"\", \"library\": \"{\\\"__current_case__\\\": 1, \\\"input1\\\": {\\\"__class__\\\": \\\"ConnectedValue\\\"}, \\\"lib_type\\\": \\\"collection\\\"}\"}",
+            "tool_state": "{\"adv\": \"{\\\"depth\\\": \\\"100\\\", \\\"gsize\\\": \\\"\\\", \\\"kmers\\\": \\\"\\\", \\\"mincov\\\": \\\"2\\\", \\\"minlen\\\": \\\"0\\\", \\\"namefmt\\\": \\\"contig%05d\\\", \\\"nocorr\\\": \\\"true\\\", \\\"opts\\\": \\\"\\\"}\", \"trim\": \"\\\"true\\\"\", \"log\": \"\\\"true\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"assembler\": \"\\\"spades\\\"\", \"library\": \"{\\\"__current_case__\\\": 1, \\\"input1\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"lib_type\\\": \\\"collection\\\"}\"}",
             "id": 1,
             "tool_shed_repository": {
                 "owner": "iuc",
@@ -68,11 +74,6 @@
             "errors": null,
             "name": "Shovill",
             "post_job_actions": {
-                "HideDatasetActionshovill_std_log": {
-                    "output_name": "shovill_std_log",
-                    "action_type": "HideDatasetAction",
-                    "action_arguments": {}
-                },
                 "HideDatasetActioncontigs_graph": {
                     "output_name": "contigs_graph",
                     "action_type": "HideDatasetAction",
@@ -83,6 +84,13 @@
                     "action_type": "DeleteIntermediatesAction",
                     "action_arguments": {}
                 },
+                "RenameDatasetActionshovill_std_log": {
+                    "output_name": "shovill_std_log",
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "shovill.log"
+                    }
+                },
                 "HideDatasetActioncontigs": {
                     "output_name": "contigs",
                     "action_type": "HideDatasetAction",
@@ -90,7 +98,12 @@
                 }
             },
             "label": null,
-            "inputs": [],
+            "inputs": [
+                {
+                    "name": "library",
+                    "description": "runtime parameter for tool Shovill"
+                }
+            ],
             "position": {
                 "top": 233,
                 "left": 626.5
@@ -141,7 +154,7 @@
                     "id": 1
                 }
             },
-            "tool_state": "{\"input_operon\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__page__\": null, \"threshold_contig\": \"\\\"0,1000\\\"\", \"__rerun_remap_job_id__\": null, \"annot\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"large\": \"\\\"false\\\"\", \"type_file\": \"\\\"contig\\\"\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"input_size\": \"\\\"\\\"\", \"input_ref\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"min_contig\": \"\\\"500\\\"\", \"gene_selection\": \"\\\"prokaryotes\\\"\"}",
+            "tool_state": "{\"input_operon\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__page__\": null, \"threshold_contig\": \"\\\"0,1000\\\"\", \"__rerun_remap_job_id__\": null, \"annot\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"large\": \"\\\"false\\\"\", \"type_file\": \"\\\"contig\\\"\", \"input\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"input_size\": \"\\\"\\\"\", \"input_ref\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"min_contig\": \"\\\"500\\\"\", \"gene_selection\": \"\\\"prokaryotes\\\"\"}",
             "id": 2,
             "tool_shed_repository": {
                 "owner": "iuc",
@@ -197,10 +210,6 @@
                     "description": "runtime parameter for tool Quast"
                 },
                 {
-                    "name": "input",
-                    "description": "runtime parameter for tool Quast"
-                },
-                {
                     "name": "input_ref",
                     "description": "runtime parameter for tool Quast"
                 }
@@ -244,7 +253,7 @@
                     "id": 1
                 }
             },
-            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"input_files\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"settings\": \"{\\\"__current_case__\\\": 0, \\\"advanced\\\": \\\"simple\\\"}\"}",
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"input_files\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"settings\": \"{\\\"__current_case__\\\": 1, \\\"advanced\\\": \\\"advanced\\\", \\\"mincov\\\": \\\"10\\\", \\\"minid\\\": \\\"95\\\", \\\"novel\\\": \\\"false\\\", \\\"scheme_condition\\\": {\\\"__current_case__\\\": 0, \\\"exclude\\\": \\\"\\\", \\\"minscore\\\": \\\"50\\\", \\\"set_scheme\\\": \\\"auto\\\"}}\"}",
             "id": 3,
             "tool_shed_repository": {
                 "owner": "iuc",
@@ -272,7 +281,12 @@
                 }
             },
             "label": null,
-            "inputs": [],
+            "inputs": [
+                {
+                    "name": "input_files",
+                    "description": "runtime parameter for tool MLST"
+                }
+            ],
             "position": {
                 "top": 520.5,
                 "left": 939.5

@@ -9,40 +9,33 @@
     <requiresSingleSample>true</requiresSingleSample>
   </inputs>
   <parameters>
-    <parameter name="shovill-1-adv.nocorr" defaultValue="false">
+    <parameter name="shovill-nocorr" defaultValue="false">
       <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.nocorr"/>
     </parameter>
-    <parameter name="shovill-1-adv.mincov" defaultValue="1">
+    <parameter name="shovill-mincov" defaultValue="2">
       <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.mincov"/>
     </parameter>
-    <parameter name="shovill-1-trim" defaultValue="false">
+    <parameter name="shovill-trim" defaultValue="true">
       <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="trim"/>
     </parameter>
-    <parameter name="shovill-1-adv.namefmt" defaultValue="contig%05d">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.namefmt"/>
-    </parameter>
-    <parameter name="shovill-1-adv.depth" defaultValue="100">
+    <parameter name="shovill-depth" defaultValue="100">
       <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.depth"/>
     </parameter>
-    <parameter name="shovill-1-adv.gsize" defaultValue="">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.gsize"/>
-    </parameter>
-    <parameter name="shovill-1-adv.kmers" defaultValue="">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.kmers"/>
-    </parameter>
-    <parameter name="shovill-1-adv.opts" defaultValue="">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.opts"/>
-    </parameter>
-    <parameter name="shovill-1-adv.minlen" defaultValue="1">
+    <parameter name="shovill-minlen" defaultValue="1">
       <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.minlen"/>
     </parameter>
-    <parameter name="shovill-1-assembler" defaultValue="spades">
-      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="assembler"/>
+    <parameter name="mlst-minid" defaultValue="95">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/mlst/mlst/2.16.1" parameterName="settings.minid"/>
+    </parameter>
+    <parameter name="mlst-mincov" defaultValue="10">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/mlst/mlst/2.16.1" parameterName="settings.mincov"/>
     </parameter>
   </parameters>
   <outputs>
-    <output name="assembly_quality" fileName="quast.tsv"/>
     <output name="mlst" fileName="mlst.tsv"/>
+    <output name="novel_alleles" fileName="novel_alleles.fasta"/>
+    <output name="assembly_quality" fileName="quast.tsv"/>
+    <output name="assembly_log" fileName="shovill.log"/>
   </outputs>
   <toolRepositories>
     <repository>
