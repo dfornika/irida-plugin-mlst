@@ -24,7 +24,7 @@ Please download the provided `irida-plugin-mlst-[version].jar` from the [release
 
 ## Installing Galaxy Dependencies
 
-In order to use this pipeline, you will also have to install the [RGI][], [staramr][], and [shovill][] (for assembly) Galaxy tools within your Galaxy instance. These can be found at:
+In order to use this pipeline, you will also have to install the [mlst][], [quast][], and [shovill][] (for assembly) Galaxy tools within your Galaxy instance. These can be found at:
 
 | Name    | Version  | Galaxy Tool                                                    |
 |---------|----------|----------------------------------------------------------------|
