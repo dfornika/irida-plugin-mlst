@@ -74,6 +74,15 @@ The following dependencies are required in order to make use of this plugin.
 * [IRIDA][] >= 0.23.0
 * [Java][] >= 1.8 and [Maven][maven] (for building)
 
+## Installing Galaxy Dependencies
+
+In order to use this pipeline, you will also have to install the [RGI][], [staramr][], and [shovill][] (for assembly) Galaxy tools within your Galaxy instance. These can be found at:
+
+| Name    | Version  | Galaxy Tool                                                    |
+|---------|----------|----------------------------------------------------------------|
+| mlst    | `2.16.1` | <https://toolshed.g2.bx.psu.edu/view/iuc/mlst/1f5641a52664>    |
+| quast   | `5.0.2`  | <https://toolshed.g2.bx.psu.edu/view/iuc/quast/81df4950d65b>   |
+| shovill | `1.0.4`  | <https://toolshed.g2.bx.psu.edu/view/iuc/shovill/865119fcb694> |
 
 ## 6. Distribute
 
