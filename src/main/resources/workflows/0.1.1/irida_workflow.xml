@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iridaWorkflow>
+  <id>0b7ce4de-b428-4c53-a18b-7659f44d359a</id>
+  <name>MLST</name>
+  <version>0.1.1</version>
+  <analysisType>MLST</analysisType>
+  <inputs>
+    <sequenceReadsPaired>sequence_reads_paired</sequenceReadsPaired>
+    <requiresSingleSample>true</requiresSingleSample>
+  </inputs>
+  <parameters>
+    <parameter name="shovill-nocorr" defaultValue="false">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.nocorr"/>
+    </parameter>
+    <parameter name="shovill-mincov" defaultValue="2">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.mincov"/>
+    </parameter>
+    <parameter name="shovill-trim" defaultValue="true">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="trim"/>
+    </parameter>
+    <parameter name="shovill-depth" defaultValue="100">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.depth"/>
+    </parameter>
+    <parameter name="shovill-minlen" defaultValue="1">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/shovill/shovill/1.0.4" parameterName="adv.minlen"/>
+    </parameter>
+    <parameter name="mlst-minid" defaultValue="95">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/mlst/mlst/2.16.1" parameterName="settings.minid"/>
+    </parameter>
+    <parameter name="mlst-mincov" defaultValue="10">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/mlst/mlst/2.16.1" parameterName="settings.mincov"/>
+    </parameter>
+  </parameters>
+  <outputs>
+    <output name="mlst" fileName="mlst.tsv"/>
+    <output name="novel_alleles" fileName="novel_alleles.fasta"/>
+    <output name="assembly_quality" fileName="quast.tsv"/>
+    <output name="assembly_log" fileName="shovill.log"/>
+  </outputs>
+  <toolRepositories>
+    <repository>
+      <name>shovill</name>
+      <owner>iuc</owner>
+      <url>https://toolshed.g2.bx.psu.edu/</url>
+      <revision>865119fcb694</revision>
+    </repository>
+    <repository>
+      <name>quast</name>
+      <owner>iuc</owner>
+      <url>https://toolshed.g2.bx.psu.edu/</url>
+      <revision>81df4950d65b</revision>
+    </repository>
+    <repository>
+      <name>mlst</name>
+      <owner>iuc</owner>
+      <url>https://toolshed.g2.bx.psu.edu/</url>
+      <revision>1f5641a52664</revision>
+    </repository>
+  </toolRepositories>
+</iridaWorkflow>

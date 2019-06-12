@@ -77,7 +77,7 @@ public class MLSTPlugin extends Plugin {
 		 */
 		@Override
 		public UUID getDefaultWorkflowUUID() {
-			return UUID.fromString("1449d2ed-03ce-41b8-a746-b5328c5f370a");
+			return UUID.fromString("0b7ce4de-b428-4c53-a18b-7659f44d359a");
 		}
 
 		/*******************************************************************************
