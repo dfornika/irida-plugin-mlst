@@ -1,4 +1,4 @@
-package org.publichealthbioinformatics.irida.plugins;
+package org.publichealthbioinformatics.irida.plugin.mlst;
 
 import java.awt.Color;
 import java.util.Optional;
