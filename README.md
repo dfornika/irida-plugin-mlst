@@ -1,3 +1,5 @@
+[![GitHub release](https://img.shields.io/github/release/public-health-bioinformatics/irida-plugin-mlst.svg)](https://github.com/public-health-bioinformatics/irida-plugin-mlst/releases/latest)
+
 # IRIDA MLST Pipeline Plugin
 
 # Table of Contents
