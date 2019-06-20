@@ -2,6 +2,8 @@
 
 # IRIDA MLST Pipeline Plugin
 
+![workflow.svg][]
+
 # Table of Contents
 
    * [IRIDA MLST Pipeline Plugin](#irida-mlst-pipeline-plugin)
@@ -108,4 +110,5 @@ This should produce a `target/*.jar` file, which can be copied into `/etc/irida/
 [mlst-results.png]: doc/images/mlst-results.png
 [mlst-pipeline.png]: doc/images/mlst-pipeline.png
 [mlst-metadata.png]: doc/images/mlst-metadata.png
+[workflow.svg]: doc/images/workflow.svg
 [releases]: https://github.com/public-health-bioinformatics/irida-plugin-mlst/releases
