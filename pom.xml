@@ -6,12 +6,12 @@
 
 	<groupId>org.publichealthbioinformatics</groupId>
 	<artifactId>irida-plugin-mlst</artifactId>
-	<version>0.1.1</version>
+	<version>0.2.0</version>
 
 	<properties>
 		<plugin.id>mlst</plugin.id>
 		<plugin.class>org.publichealthbioinformatics.irida.plugin.mlst.MLSTPlugin</plugin.class>
-		<plugin.version>0.1.1</plugin.version>
+		<plugin.version>0.2.0</plugin.version>
 		<plugin.provider>Dan Fornika</plugin.provider>
 		<plugin.dependencies></plugin.dependencies>
 		<plugin.requires.runtime>1.0.0</plugin.requires.runtime>
